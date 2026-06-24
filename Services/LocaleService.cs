@@ -6,6 +6,7 @@ namespace voila.Services;
 public sealed class LocaleService
 {
   private readonly Dictionary<string, LocaleData> _byCode;
+  private readonly string _defaultCode;
   private static readonly JsonSerializerOptions JsonOpts = new()
   {
     PropertyNameCaseInsensitive = true
@@ -41,13 +42,20 @@ public sealed class LocaleService
 
     if (_byCode.Count == 0)
       throw new InvalidDataException($"No locale files found in {dir}");
+
+    _defaultCode = config["DEFAULT_LOCALE"] ?? "en-US";
+    if (!_byCode.ContainsKey(_defaultCode))
+      _defaultCode = _byCode.Keys.OrderBy(k => k, StringComparer.OrdinalIgnoreCase).First();
   }
 
   public bool TryGet(string code, out LocaleData locale) => _byCode.TryGetValue(code, out locale!);
 
   public LocaleData GetOrDefault(string? code) =>
-      code is not null && _byCode.TryGetValue(code, out var l) ? l : _byCode.Values.First();
+    code is not null && _byCode.TryGetValue(code, out var l) ? l : _byCode[_defaultCode];
 
   public IEnumerable<(string Code, string Display)> Available =>
-      _byCode.Values.Select(l => (l.Locale, l.DisplayName));
+    _byCode.Values
+        .OrderByDescending(l => l.Locale == _defaultCode)
+        .ThenBy(l => l.Locale, StringComparer.OrdinalIgnoreCase)
+        .Select(l => (l.Locale, l.DisplayName));
 }
