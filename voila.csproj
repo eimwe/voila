@@ -13,4 +13,10 @@
     <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="4.148.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Data\locales\**\*.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Fonts\**\*.ttf" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="SoundFonts\**\*.sf2" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
