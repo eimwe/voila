@@ -103,8 +103,12 @@ public sealed class CoverService
     c.DrawCircle(r.Next(rad, Size - rad), r.Next(rad, (int)(Size * 0.6)), rad, paint);
 
     float tx = r.Next(0, Size), ty = r.Next(0, (int)(Size * 0.5)); int t = r.Next(120, 241);
-    using var tri = new SKPath();
-    tri.MoveTo(tx, ty); tri.LineTo(tx + t, ty); tri.LineTo(tx + t / 2f, ty + t); tri.Close();
+    var triBuilder = new SKPathBuilder();
+    triBuilder.MoveTo(tx, ty);
+    triBuilder.LineTo(tx + t, ty);
+    triBuilder.LineTo(tx + t / 2f, ty + t);
+    triBuilder.Close();
+    using var tri = triBuilder.Snapshot();
     paint.Color = Pick(r, p.Colors);
     c.DrawPath(tri, paint);
   }
@@ -116,9 +120,13 @@ public sealed class CoverService
     for (float x = -Size; x < Size * 2; x += w, i++)
     {
       paint.Color = p.Colors[i % p.Colors.Length];
-      using var path = new SKPath();
-      path.MoveTo(x, 0); path.LineTo(x + w, 0);
-      path.LineTo(x + w - Size, Size); path.LineTo(x - Size, Size); path.Close();
+      var pb = new SKPathBuilder();
+      pb.MoveTo(x, 0);
+      pb.LineTo(x + w, 0);
+      pb.LineTo(x + w - Size, Size);
+      pb.LineTo(x - Size, Size);
+      pb.Close();
+      using var path = pb.Snapshot();
       c.DrawPath(path, paint);
     }
   }
@@ -146,14 +154,16 @@ public sealed class CoverService
       paint.Color = p.Colors[b % p.Colors.Length];
       double freq = U(r, 1.0, 2.0);
       float y0 = b * bh;
-      using var path = new SKPath();
-      path.MoveTo(0, Size);
+      var pb = new SKPathBuilder();
+      pb.MoveTo(0, Size);
       for (int x = 0; x <= Size; x += 12)
       {
         double y = y0 + Math.Sin((double)x / Size * Math.PI * 2 * freq + ph + b) * amp;
-        path.LineTo(x, (float)y);
+        pb.LineTo(x, (float)y);
       }
-      path.LineTo(Size, Size); path.Close();
+      pb.LineTo(Size, Size);
+      pb.Close();
+      using var path = pb.Snapshot();
       c.DrawPath(path, paint);
     }
   }
@@ -179,8 +189,12 @@ public sealed class CoverService
       }
       else if (kind < 0.8)
       {
-        using var tri = new SKPath();
-        tri.MoveTo(cx, cy - rad); tri.LineTo(cx - rad, cy + rad); tri.LineTo(cx + rad, cy + rad); tri.Close();
+        var pb = new SKPathBuilder();
+        pb.MoveTo(cx, cy - rad);
+        pb.LineTo(cx - rad, cy + rad);
+        pb.LineTo(cx + rad, cy + rad);
+        pb.Close();
+        using var tri = pb.Snapshot();
         c.DrawPath(tri, paint);
       }
       else
