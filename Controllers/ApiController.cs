@@ -10,13 +10,15 @@ public sealed class ApiController : ControllerBase
   private readonly LocaleService _locales;
   private readonly SongService _generator;
   private readonly CoverService _cover;
+  private readonly AudioService _audio;
   private readonly int _pageSize;
 
-  public ApiController(LocaleService locales, SongService generator, CoverService cover, IConfiguration config)
+  public ApiController(LocaleService locales, SongService generator, CoverService cover, AudioService audio, IConfiguration config)
   {
     _locales = locales;
     _generator = generator;
     _cover = cover;
+    _audio = audio;
     _pageSize = Math.Clamp(config.GetValue("PAGE_SIZE", 20), 1, 100);
   }
 
@@ -69,6 +71,16 @@ public sealed class ApiController : ControllerBase
 
     Response.Headers.CacheControl = "public, max-age=31536000, immutable";
     return File(png, "image/png");
+  }
+
+  [HttpGet("audio")]
+  public IActionResult Audio([FromQuery] string? seed, [FromQuery] long index)
+  {
+    ulong seedVal = ParseSeed(seed);
+    if (index < 0) index = 0;
+    byte[] wav = _audio.Render(seedVal, index);
+    Response.Headers.CacheControl = "public, max-age=31536000, immutable";
+    return File(wav, "audio/wav");
   }
 
   private string BuildUrl(string kind, string locale, ulong seed, long index) =>
