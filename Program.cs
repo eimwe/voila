@@ -6,6 +6,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddSingleton<LocaleService>();
 builder.Services.AddSingleton<SongService>();
+builder.Services.AddSingleton<CoverService>();
 
 var app = builder.Build();
 
