@@ -1,8 +1,74 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Voila Music Store";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="app" class="app-shell">
+  <header class="app-header">
+    <h1>Voila Music Store</h1>
+    <div class="sub">Fake songs, generated on the fly</div>
+  </header>
+
+  <div class="toolbar">
+    <div class="d-flex flex-wrap align-items-end gap-3">
+      <div>
+        <label class="ctl-label" for="locale">Language</label>
+        <select id="locale" class="form-select form-select-sm" style="min-width: 11rem;"
+                aria-label="Language and region"></select>
+      </div>
+
+      <div>
+        <label class="ctl-label" for="seed">Seed</label>
+        <div class="input-group input-group-sm" style="width: 17rem;">
+          <input id="seed" type="text" inputmode="numeric" class="form-control"
+                 autocomplete="off" spellcheck="false" aria-label="Seed value">
+          <button id="seed-random" class="btn btn-outline-secondary" type="button"
+                  title="Generate a random seed">Random</button>
+        </div>
+      </div>
+
+      <div style="min-width: 15rem;">
+        <label class="ctl-label" for="likes">Avg. likes per song — <span id="likes-out" class="likes-out">5.0</span></label>
+        <input id="likes" type="range" class="form-range" min="0" max="10" step="0.1" value="5"
+               aria-label="Average likes per song">
+      </div>
+
+      <div class="ms-auto">
+        <label class="ctl-label">View</label>
+        <div class="btn-group btn-group-sm view-toggle" role="group" aria-label="Display mode">
+          <button id="view-table" type="button" class="btn btn-outline-primary active" aria-pressed="true">Table</button>
+          <button id="view-gallery" type="button" class="btn btn-outline-primary" aria-pressed="false">Gallery</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="status" class="text-danger small mb-2" role="status" aria-live="polite"></div>
+
+  <div id="table-view" class="view">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead>
+          <tr>
+            <th scope="col" style="width:3rem;">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Artist</th>
+            <th scope="col">Album</th>
+            <th scope="col">Genre</th>
+            <th scope="col" style="width:5rem;">Likes</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <nav class="d-flex justify-content-center align-items-center gap-3" aria-label="Table pages">
+      <button id="prev-page" class="btn btn-outline-secondary btn-sm" type="button">&lsaquo; Prev</button>
+      <span id="page-label" class="text-muted small">Page 1</span>
+      <button id="next-page" class="btn btn-outline-secondary btn-sm" type="button">Next &rsaquo;</button>
+    </nav>
+  </div>
+
+  <div id="gallery-view" class="view d-none">
+    <div id="gallery-grid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3"></div>
+    <div id="gallery-sentinel" class="py-4 text-center text-muted small">Loading more…</div>
+  </div>
 </div>
