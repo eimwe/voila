@@ -1,0 +1,165 @@
+{
+  "locale": "en-US",
+  "displayName": "English (USA)",
+  "bogusLocale": "en",
+
+  "title": {
+    "patterns": [
+      "{adj} {noun}",
+      "The {noun}",
+      "{noun} of {noun2}",
+      "{verb} the {noun}",
+      "{adj} {adj2} {noun}",
+      "{noun}",
+      "{noun} in {noun2}",
+      "No {noun}",
+      "{verb} for {noun}",
+      "{adj} {noun} Blues",
+      "Til the {noun} {verb}",
+      "{noun}, {noun2}"
+    ]
+  },
+
+  "album": {
+    "patterns": [
+      "{adj} {noun}",
+      "{noun} & {noun2}",
+      "Return to {noun}",
+      "{noun} Sessions",
+      "Live at {@city}",
+      "{adj} Tales",
+      "Songs of the {noun}",
+      "{noun} Vol. {num}",
+      "After the {noun}",
+      "The {adj} Years"
+    ],
+    "singleRatio": 0.30
+  },
+
+  "artist": {
+    "personRatio": 0.50,
+    "patterns": [
+      "The {plural}",
+      "{adj} {plural}",
+      "{noun} {plural}",
+      "{@city} {noun}",
+      "{noun} Collective",
+      "{adj} {noun}",
+      "{plural} of {@city}",
+      "{noun} & the {plural}",
+      "Royal {plural}",
+      "{adj} {noun} Orchestra"
+    ]
+  },
+
+  "genres": [
+    "Indie Rock", "Synthwave", "Dream Pop", "Lo-fi Hip Hop", "Garage Punk",
+    "Ambient", "Shoegaze", "Folk Revival", "Hard Bop", "Bedroom Pop",
+    "Post-Rock", "Neo-Soul", "Trip Hop", "Surf Rock", "Dark Wave",
+    "Math Rock", "Chillwave", "Americana", "Krautrock", "Drone",
+    "Power Pop", "Cosmic Country", "Jangle Pop", "Slowcore", "Funk",
+    "Acid Jazz", "Bluegrass", "Noise Rock", "Vaporwave", "Psych Folk",
+    "Outlaw Country", "Gospel Soul", "Swamp Blues", "Art Punk", "Sludge"
+  ],
+
+  "review": {
+    "patterns": [
+      "{opener} {praise}, {qualifier}.",
+      "{praise} — {closer}.",
+      "{opener} {qualifier}, though {critique}.",
+      "{praise}, and {praise2}. {closer}.",
+      "{opener} {critique}, but {praise}."
+    ],
+    "opener": [
+      "A bold step that", "From the first bar this record", "Against all odds it",
+      "Somehow this collection", "By the second track it",
+      "More than a comeback, it", "Beneath its calm surface this album",
+      "On repeat listens it", "Where lesser bands stumble, this one",
+      "Halfway between joy and dread, it", "With surprising restraint it",
+      "Loud, warm, and unhurried, it"
+    ],
+    "praise": [
+      "soars with confident hooks", "layers texture beautifully",
+      "finds grace in the noise", "trusts its quiet moments",
+      "lands every chorus", "swings harder than it should",
+      "wears its influences lightly", "builds to a genuine catharsis",
+      "glows with analog warmth", "earns every minute of its runtime",
+      "turns a small idea into a whole world", "refuses to repeat itself",
+      "balances ache and swagger", "feels lived-in rather than labored"
+    ],
+    "praise2": [
+      "the rhythm section is a quiet marvel", "the melodies linger for days",
+      "the production breathes", "the vocals carry real weight",
+      "the arrangements reward attention", "the sequencing is flawless",
+      "the choruses are impossible to shake", "the band sounds fearless"
+    ],
+    "qualifier": [
+      "even if the back half drags", "and never overstays its welcome",
+      "though it shows its seams late", "if you let it unfold slowly",
+      "for anyone willing to meet it halfway", "without ever raising its voice",
+      "even when the lyrics stumble", "and it sticks the landing",
+      "despite a few familiar moves", "and asks little in return"
+    ],
+    "critique": [
+      "the mix buries the vocals", "the second act loses focus",
+      "the ballads blur together", "a few tracks feel like sketches",
+      "it leans too hard on one trick", "the runtime tests your patience",
+      "the lyrics rarely surprise", "the energy dips at the midpoint",
+      "it mistakes volume for intensity", "the closer fizzles out"
+    ],
+    "closer": [
+      "essential listening", "a grower, not a shower",
+      "the year's quiet triumph", "well worth your time",
+      "a record to live inside", "their finest hour",
+      "flawed but unforgettable", "the kind of album you press on friends",
+      "proof they still have it", "destined for heavy rotation"
+    ]
+  },
+
+  "pools": {
+    "adj": [
+      "Velvet", "Electric", "Hollow", "Golden", "Restless", "Crimson", "Silent",
+      "Bitter", "Endless", "Broken", "Distant", "Lonely", "Frozen", "Savage",
+      "Gentle", "Reckless", "Faded", "Sacred", "Hidden", "Wild", "Quiet",
+      "Burning", "Midnight", "Paper", "Iron", "Glass", "Neon", "Holy",
+      "Drowned", "Feral", "Tender", "Slow", "Brilliant", "Dusty", "Cosmic",
+      "Salt", "Marble", "Ragged", "Lucid", "Bruised", "Amber", "Static",
+      "Velveteen", "Phantom", "Brittle", "Radiant", "Hungry", "Shallow",
+      "Eternal", "Modern", "Crooked", "Plastic", "Violet", "Brave", "Last",
+      "First", "Secret", "Northern", "Southern", "Honest", "Liquid", "Marigold",
+      "Threadbare", "Stubborn", "Weightless", "Borrowed", "Painted", "Hazy"
+    ],
+    "noun": [
+      "Carrot", "Mirror", "Avalanche", "Lantern", "Tide", "Cathedral", "River",
+      "Engine", "Comet", "Harbor", "Echo", "Ladder", "Garden", "Wolf", "Signal",
+      "Anchor", "Vapor", "Compass", "Tower", "Orchard", "Saint", "Stranger",
+      "Furnace", "Marble", "Static", "Saturday", "Telephone", "Coastline",
+      "Hurricane", "Skyline", "Pendulum", "Lighthouse", "Wilderness", "Mirage",
+      "Caravan", "Threshold", "Cinder", "Halo", "Meridian", "Driftwood",
+      "Glacier", "Cathedral", "Antenna", "Pulse", "Marrow", "Citadel",
+      "Riverbed", "Smoke", "Equator", "Footprint", "Sundial", "Tangle",
+      "Velvet", "Machine", "Hollow", "Lullaby", "Verdict", "Saturn", "Ember",
+      "Fever", "Cartography", "Whisper", "Avenue", "Continent", "Stardust",
+      "Tremor", "Carnival", "Undertow", "Daydream"
+    ],
+    "noun2": [],
+    "verb": [
+      "Chasing", "Breaking", "Drowning", "Counting", "Holding", "Burning",
+      "Leaving", "Falling", "Waiting", "Running", "Hunting", "Drifting",
+      "Calling", "Sinking", "Dancing", "Wandering", "Bleeding", "Building",
+      "Forgetting", "Searching", "Dreaming", "Climbing", "Fading", "Swimming",
+      "Whispering", "Howling", "Stealing", "Mending", "Crossing", "Unraveling",
+      "Carrying", "Painting", "Folding", "Returning", "Believing", "Losing"
+    ],
+    "plural": [
+      "Wolves", "Saints", "Embers", "Strangers", "Tides", "Ghosts", "Ravens",
+      "Lanterns", "Pioneers", "Drifters", "Mountains", "Outlaws", "Mirrors",
+      "Velvets", "Sparrows", "Echoes", "Sirens", "Renegades", "Comets",
+      "Wanderers", "Bandits", "Cathedrals", "Foxes", "Riverbeds", "Vagabonds",
+      "Lions", "Phantoms", "Sailors", "Magpies", "Nomads", "Cardinals",
+      "Hounds", "Mavericks", "Pilgrims", "Tigers", "Anchors", "Daydreamers",
+      "Coyotes", "Skylines", "Underdogs"
+    ],
+    "num": ["I", "II", "III", "IV", "1", "2", "3", "Two", "Three", "One"]
+  }
+}

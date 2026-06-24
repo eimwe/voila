@@ -1,0 +1,168 @@
+{
+  "locale": "de-DE",
+  "displayName": "Deutsch (Deutschland)",
+  "bogusLocale": "de",
+
+  "title": {
+    "patterns": [
+      "{adj} {noun}",
+      "Der {noun}",
+      "Die {noun2}",
+      "{noun} der {noun2}",
+      "{verb} im {noun}",
+      "{noun}",
+      "Kein {noun}",
+      "{adj} {noun} Blues",
+      "{noun} und {noun2}",
+      "Bis der {noun} {verb}",
+      "Im {noun}",
+      "{verb} nach {noun}"
+    ]
+  },
+
+  "album": {
+    "patterns": [
+      "{adj} {noun}",
+      "{noun} & {noun2}",
+      "Zurück zum {noun}",
+      "{noun} Sessions",
+      "Live in {@city}",
+      "{adj} Geschichten",
+      "Lieder vom {noun}",
+      "{noun} Vol. {num}",
+      "Nach dem {noun}",
+      "Die {adj} Jahre"
+    ],
+    "singleRatio": 0.30
+  },
+
+  "artist": {
+    "personRatio": 0.50,
+    "patterns": [
+      "Die {plural}",
+      "{adj} {plural}",
+      "{noun} {plural}",
+      "{@city} {noun}",
+      "{noun} Kollektiv",
+      "{adj} {noun}",
+      "{plural} aus {@city}",
+      "{noun} & die {plural}",
+      "Königliche {plural}",
+      "{adj} {noun} Orchester"
+    ]
+  },
+
+  "genres": [
+    "Indie-Rock", "Synthwave", "Dream Pop", "Lo-Fi Hip-Hop", "Garagenpunk",
+    "Ambient", "Shoegaze", "Liedermacher", "Hardbop", "Schlager",
+    "Post-Rock", "Neo-Soul", "Trip-Hop", "Surf-Rock", "Dark Wave",
+    "Math-Rock", "Chillwave", "Krautrock", "Drone", "Neue Deutsche Welle",
+    "Power Pop", "Volksmusik", "Jangle Pop", "Slowcore", "Funk",
+    "Acid Jazz", "Elektro", "Noise-Rock", "Vaporwave", "Psych-Folk",
+    "Techno", "Gospel-Soul", "Blues", "Art-Punk", "Sludge", "Minimal"
+  ],
+
+  "review": {
+    "patterns": [
+      "{opener} {praise}, {qualifier}.",
+      "{praise} — {closer}.",
+      "{opener} {qualifier}, obwohl {critique}.",
+      "{praise}, und {praise2}. {closer}.",
+      "{opener} {critique}, doch {praise}."
+    ],
+    "opener": [
+      "Ein mutiger Schritt, der", "Schon im ersten Takt", "Wider Erwarten",
+      "Irgendwie schafft es die Platte", "Spätestens beim zweiten Stück",
+      "Mehr als ein Comeback,", "Unter der ruhigen Oberfläche",
+      "Bei wiederholtem Hören", "Wo andere Bands straucheln,",
+      "Zwischen Freude und Schwermut", "Mit überraschender Zurückhaltung",
+      "Laut, warm und unaufgeregt"
+    ],
+    "praise": [
+      "trägt das Album mit sicheren Hooks", "schichtet Texturen wunderbar",
+      "findet Anmut im Lärm", "vertraut den leisen Momenten",
+      "sitzt jeder Refrain", "swingt härter als erwartet",
+      "trägt seine Einflüsse leicht", "steuert auf echte Katharsis zu",
+      "glüht in analoger Wärme", "verdient jede Minute Spielzeit",
+      "wird aus einer kleinen Idee eine ganze Welt", "wiederholt sich nie",
+      "hält Sehnsucht und Selbstbewusstsein in Balance", "klingt gelebt statt bemüht"
+    ],
+    "praise2": [
+      "die Rhythmusgruppe ist ein stilles Wunder", "die Melodien bleiben tagelang",
+      "die Produktion atmet", "der Gesang hat echtes Gewicht",
+      "die Arrangements belohnen Aufmerksamkeit", "die Abfolge ist makellos",
+      "die Refrains sind unausweichlich", "die Band klingt furchtlos"
+    ],
+    "qualifier": [
+      "auch wenn die zweite Hälfte schleppt", "ohne je zu überfordern",
+      "obwohl es spät seine Nähte zeigt", "wenn man es langsam wirken lässt",
+      "für alle, die ihm entgegenkommen", "ohne je die Stimme zu erheben",
+      "selbst wenn die Texte stolpern", "und die Landung gelingt",
+      "trotz einiger vertrauter Gesten", "und verlangt wenig zurück"
+    ],
+    "critique": [
+      "der Mix den Gesang verschluckt", "der zweite Akt den Fokus verliert",
+      "die Balladen ineinander verschwimmen", "ein paar Stücke wie Skizzen wirken",
+      "es sich zu sehr auf einen Trick verlässt", "die Spielzeit die Geduld prüft",
+      "die Texte selten überraschen", "die Energie in der Mitte nachlässt",
+      "es Lautstärke mit Intensität verwechselt", "der Abschluss verpufft"
+    ],
+    "closer": [
+      "ein Muss", "ein Spätzünder, kein Strohfeuer",
+      "der stille Triumph des Jahres", "die Zeit absolut wert",
+      "eine Platte zum Darin-Wohnen", "ihre Sternstunde",
+      "fehlerhaft, aber unvergesslich", "ein Album, das man Freunden aufdrängt",
+      "Beweis, dass sie es noch draufhaben", "reif für die Dauerrotation"
+    ]
+  },
+
+  "pools": {
+    "adj": [
+      "Samtene", "Elektrische", "Hohle", "Goldene", "Rastlose", "Purpurne",
+      "Stille", "Bittere", "Endlose", "Zerbrochene", "Ferne", "Einsame",
+      "Gefrorene", "Wilde", "Sanfte", "Waghalsige", "Verblasste", "Heilige",
+      "Verborgene", "Leise", "Brennende", "Mitternächtliche", "Papierne",
+      "Eiserne", "Gläserne", "Neonhelle", "Ertrunkene", "Zärtliche", "Langsame",
+      "Strahlende", "Staubige", "Kosmische", "Salzige", "Marmorne", "Zerzauste",
+      "Klare", "Geschundene", "Bernsteinerne", "Statische", "Phantomhafte",
+      "Spröde", "Hungrige", "Seichte", "Ewige", "Moderne", "Krumme",
+      "Plastikne", "Violette", "Tapfere", "Letzte", "Erste", "Geheime",
+      "Nördliche", "Südliche", "Ehrliche", "Flüssige", "Sture", "Schwerelose",
+      "Geliehene", "Bemalte", "Dunstige", "Trübe", "Wache", "Mutige",
+      "Goldgelbe", "Schwere", "Schimmernde", "Zarte", "Müde", "Helle"
+    ],
+    "noun": [
+      "Karotte", "Spiegel", "Lawine", "Laterne", "Gezeit", "Kathedrale",
+      "Fluss", "Motor", "Komet", "Hafen", "Echo", "Leiter", "Garten", "Wolf",
+      "Signal", "Anker", "Dunst", "Kompass", "Turm", "Obstgarten", "Heilige",
+      "Fremde", "Ofen", "Marmor", "Samstag", "Telefon", "Küste", "Orkan",
+      "Horizont", "Pendel", "Leuchtturm", "Wildnis", "Fata Morgana",
+      "Karawane", "Schwelle", "Funke", "Heiligenschein", "Treibholz",
+      "Gletscher", "Antenne", "Puls", "Mark", "Zitadelle", "Flussbett",
+      "Rauch", "Äquator", "Fußabdruck", "Sonnenuhr", "Gewirr", "Maschine",
+      "Höhle", "Wiegenlied", "Urteil", "Saturn", "Glut", "Fieber",
+      "Geflüster", "Allee", "Kontinent", "Sternenstaub", "Beben", "Karneval",
+      "Sog", "Tagtraum", "Nebel", "Schatten", "Brücke", "Wüste", "Sturm",
+      "Mond"
+    ],
+    "noun2": [],
+    "verb": [
+      "Jagen", "Brechen", "Ertrinken", "Zählen", "Halten", "Brennen", "Gehen",
+      "Fallen", "Warten", "Rennen", "Treiben", "Rufen", "Sinken", "Tanzen",
+      "Wandern", "Bluten", "Bauen", "Vergessen", "Suchen", "Träumen",
+      "Klettern", "Verblassen", "Schwimmen", "Flüstern", "Heulen", "Stehlen",
+      "Heilen", "Überqueren", "Tragen", "Malen", "Falten", "Zurückkehren",
+      "Glauben", "Verlieren", "Schweben", "Atmen", "Lauschen", "Erwachen"
+    ],
+    "plural": [
+      "Wölfe", "Heiligen", "Funken", "Fremden", "Geister", "Raben", "Laternen",
+      "Pioniere", "Vagabunden", "Berge", "Banditen", "Spiegel", "Spatzen",
+      "Echos", "Sirenen", "Kometen", "Wanderer", "Kathedralen", "Füchse",
+      "Löwen", "Phantome", "Matrosen", "Elstern", "Nomaden", "Kardinäle",
+      "Hunde", "Pilger", "Tiger", "Anker", "Tagträumer", "Kojoten",
+      "Außenseiter", "Schatten", "Engel", "Träumer", "Reiter", "Nachbarn",
+      "Krähen", "Sterne", "Wellen"
+    ],
+    "num": ["I", "II", "III", "IV", "1", "2", "3", "Zwei", "Drei", "Eins"]
+  }
+}
