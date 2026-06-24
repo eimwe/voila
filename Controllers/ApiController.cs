@@ -9,12 +9,14 @@ public sealed class ApiController : ControllerBase
 {
   private readonly LocaleService _locales;
   private readonly SongService _generator;
+  private readonly CoverService _cover;
   private readonly int _pageSize;
 
-  public ApiController(LocaleService locales, SongService generator, IConfiguration config)
+  public ApiController(LocaleService locales, SongService generator, CoverService cover, IConfiguration config)
   {
     _locales = locales;
     _generator = generator;
+    _cover = cover;
     _pageSize = Math.Clamp(config.GetValue("PAGE_SIZE", 20), 1, 100);
   }
 
@@ -54,6 +56,20 @@ public sealed class ApiController : ControllerBase
   [HttpGet("locales")]
   public IActionResult Locales() =>
       Ok(_locales.Available.Select(a => new { code = a.Code, display = a.Display }));
+
+  [HttpGet("cover")]
+  public IActionResult Cover([FromQuery] string? locale, [FromQuery] string? seed, [FromQuery] long index)
+  {
+    var loc = _locales.GetOrDefault(locale);
+    ulong seedVal = ParseSeed(seed);
+    if (index < 0) index = 0;
+
+    var rec = _generator.Generate(loc, seedVal, index, 0);
+    byte[] png = _cover.Render(rec.Title, rec.Artist, seedVal, index);
+
+    Response.Headers.CacheControl = "public, max-age=31536000, immutable";
+    return File(png, "image/png");
+  }
 
   private string BuildUrl(string kind, string locale, ulong seed, long index) =>
       $"/api/{kind}?locale={Uri.EscapeDataString(locale)}&seed={seed}&index={index}";
